@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Create New Item";
+}
+<h2>@ViewData["Title"]</h2>
+
+<p>Use this page to create a new storage item.</p>
+
+<div class="table">
+    <div class="row">
+        <div class="col">
+            <label><span>Name:</span></label>
+        </div>
+        <div class="col">
+            <input id="txt_name" type="text" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label><span>No. Columns:</span></label>
+        </div>
+        <div class="col">
+            <input id="txt_num_cols" type="number" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label><span>No. Rows:</span></label>
+        </div>
+        <div class="col">
+            <input id="txt_num_rows" type="number" />
+        </div>
+    </div>
+</div>
+
+<div>
+    <input id="btn_create" type="button" value="Create" class="btn-primary btn "/>
+</div>

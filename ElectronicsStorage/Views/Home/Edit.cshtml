@@ -1,0 +1,58 @@
+﻿@model ES.Data.Model.StorageBox
+
+<h4>StorageBox</h4>
+<hr />
+
+@*<div class="storagebox">
+        <div class="row">
+            <div class="col">
+                <div class="drawer-editable">
+                    <label>Drawer</label>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+<table class="storagebox">
+    @{
+        for (int r = 0; r < 10; r++)
+        {
+            <tr>
+                @{
+                    for (int c = 0; c < 6; c++)
+                    {
+                        <td>
+                            <div class="drawer-editable">
+                                <label>Drawer</label>
+                                <button>Merge Right</button>
+                                <button>Merge Bottom</button>
+                            </div>
+                        </td>
+                    }
+                }
+            </tr>
+        }
+    }
+
+
+</table>
+
+<div class="row">
+    <div class="col-md-4">
+
+        @*<form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </form>*@
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
