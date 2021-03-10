@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+FuSf26AVK1aD6csQiJchntB30jU8sUZzEReA1pYcBUkSug4WLeMYDaSMaWwNr9prvSTL74GSxEoM7TKZ1/hFQ==",
+  "dgSpecHash": "iHuShVD/LAyH6uIAERGpjPgfImTQeaPmcVa1n4EaMSW/ar0pRX5cAJfaAcD1UaQZJO5FtPhaiyQwZlq++NYk/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ali\\Source\\Repos\\ElectronicsStorage\\ES.Data\\ES.Data.csproj",
+  "projectFilePath": "C:\\Users\\PC_KhanSenpi\\Source\\Repos\\AliAlAali\\ElectronicsStorage\\ES.Data\\ES.Data.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\PC_KhanSenpi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
