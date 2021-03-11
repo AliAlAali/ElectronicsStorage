@@ -38,6 +38,11 @@ function MergeCell(sender) {
     var targetId = 'btn_' + targetPosition[0] + '_' + targetPosition[1] + '_' + type;
     var targetCell = $('#' + targetId);
     console.log(targetCell);
+
+    var mDrawer = sender.closest('.drawer-editable');
+    var column = mDrawer.parentElement;
+    column.rowspan = 2;
+    var targetDrawer = targetCell.closest('.drawer-editable');
 }
 
 function GetCoordinates(position) {

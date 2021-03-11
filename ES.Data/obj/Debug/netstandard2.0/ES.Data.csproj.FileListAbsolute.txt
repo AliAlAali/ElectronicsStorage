@@ -7,3 +7,12 @@ C:\Users\Ali\Source\Repos\ElectronicsStorage\ES.Data\obj\Debug\netstandard2.0\ES
 C:\Users\Ali\Source\Repos\ElectronicsStorage\ES.Data\obj\Debug\netstandard2.0\ES.Data.csproj.CoreCompileInputs.cache
 C:\Users\Ali\Source\Repos\ElectronicsStorage\ES.Data\obj\Debug\netstandard2.0\ES.Data.dll
 C:\Users\Ali\Source\Repos\ElectronicsStorage\ES.Data\obj\Debug\netstandard2.0\ES.Data.pdb
+C:\Users\PC_KhanSenpi\Source\Repos\AliAlAali\ElectronicsStorage\ES.Data\bin\Debug\netstandard2.0\ES.Data.deps.json
+C:\Users\PC_KhanSenpi\Source\Repos\AliAlAali\ElectronicsStorage\ES.Data\bin\Debug\netstandard2.0\ES.Data.dll
+C:\Users\PC_KhanSenpi\Source\Repos\AliAlAali\ElectronicsStorage\ES.Data\bin\Debug\netstandard2.0\ES.Data.pdb
+C:\Users\PC_KhanSenpi\Source\Repos\AliAlAali\ElectronicsStorage\ES.Data\obj\Debug\netstandard2.0\ES.Data.csprojAssemblyReference.cache
+C:\Users\PC_KhanSenpi\Source\Repos\AliAlAali\ElectronicsStorage\ES.Data\obj\Debug\netstandard2.0\ES.Data.AssemblyInfoInputs.cache
+C:\Users\PC_KhanSenpi\Source\Repos\AliAlAali\ElectronicsStorage\ES.Data\obj\Debug\netstandard2.0\ES.Data.AssemblyInfo.cs
+C:\Users\PC_KhanSenpi\Source\Repos\AliAlAali\ElectronicsStorage\ES.Data\obj\Debug\netstandard2.0\ES.Data.csproj.CoreCompileInputs.cache
+C:\Users\PC_KhanSenpi\Source\Repos\AliAlAali\ElectronicsStorage\ES.Data\obj\Debug\netstandard2.0\ES.Data.dll
+C:\Users\PC_KhanSenpi\Source\Repos\AliAlAali\ElectronicsStorage\ES.Data\obj\Debug\netstandard2.0\ES.Data.pdb
