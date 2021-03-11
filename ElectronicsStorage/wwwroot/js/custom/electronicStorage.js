@@ -21,9 +21,9 @@ function MergeCell(sender) {
         targetPosition[0] -= 1;
     } else if (type === 'top') {
         targetPosition[1] -= 1;
-    }else if (type === 'right') {
+    } else if (type === 'right') {
         targetPosition[0] += 1;
-    }else if (type === 'bottom') {
+    } else if (type === 'bottom') {
         targetPosition[1] += 1;
     }
 
@@ -43,6 +43,8 @@ function MergeCell(sender) {
     var column = mDrawer.parentElement;
     column.rowspan = 2;
     var targetDrawer = targetCell.closest('.drawer-editable');
+
+    var allTargets = GetAllTargets(sender);
 }
 
 function GetCoordinates(position) {
@@ -69,4 +71,60 @@ function IsWithinBounds(boundsRect, position) {
     let left = boundsRect[3];
 
     return (x < right && x >= left && y < bottom && y >= top);
+}
+
+function GetAllTargets(sender) {
+
+    var targets = [];
+
+    // get origin position
+    var orgPos = GetCoordinates(sender.attributes.grid.value);
+    var orgCol = sender.parentElement;
+    var type = sender.attributes.merge_type.value;
+    var hOffset = orgCol.colSpan - 1;
+    var vOffset = orgCol.rowSpan - 1;
+
+    if (type === 'right') {
+        hOffset += 1;
+    } else if (type === 'bottom') {
+        vOffset += 1;
+    }
+
+    var drawers = $('.drawer-editable');
+    for (i in drawers) {
+        let d = drawers[i];
+        let btn = $('#' + d.id).find('.merge-btn');
+        let jbtn = $('#' + btn[0].id);
+        let pos = GetCoordinates(jbtn[0].attributes.grid.value);
+        var debug = 1;
+
+        if (IsWithinBounds([orgPos[1], orgPos[0] + hOffset, orgPos[1] + vOffset, orgPos[0]], pos)) {
+            targets.push(d);
+        }
+    }
+
+    return targets;
+}
+
+function FindCriticalTarget(targets) {
+    // finds the left-top corner drawer in the merge
+    // assume targets are not empty
+
+    var minimum = PositionScore(targets[0]);
+    var critial = undefined;
+    for (i in targets) {
+        var t = targets[i];
+        var score = PositionScore(t);
+
+        if (score <= minimum) {
+            minimum = score;
+            critial = t;
+        }
+    }
+
+    return critial;
+}
+
+function PositionScore(target) {
+    return target.attributes.colspan + target.attributes.rowspan;
 }

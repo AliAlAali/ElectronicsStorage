@@ -21,29 +21,30 @@
             {
                 <tr>
                     @{
-                            for (int c = 0; c < 6; c++)
-                            {
-                                var prefix = String.Format("btn_{0}_{1}_", c, r);
-                                var btn_top_id = prefix + "top";
-                                var btn_right_id = prefix + "right";
-                                var btn_bottom_id = prefix + "bottom";
-                                var btn_left_id = prefix + "left";
+                        for (int c = 0; c < 6; c++)
+                        {
+                            var prefix = String.Format("btn_{0}_{1}_", c, r);
+                            var btn_top_id = prefix + "top";
+                            var btn_right_id = prefix + "right";
+                            var btn_bottom_id = prefix + "bottom";
+                            var btn_left_id = prefix + "left";
 
-                                var position = String.Format("({0}, {1})", c, r);
+                            var drawerId = "drawer_" + prefix;
+                            var position = String.Format("({0}, {1})", c, r);
                             <td>
-                                <div class="drawer-editable">
+                                <div class="drawer-editable" id="@drawerId">
                                     <label>Drawer</label>
                                     <table>
                                         <tr>
                                             <td></td>
                                             <td>
-                                                <button id="@btn_top_id" class="merge-btn" grid="@position" merge_type="top"><i class="fas fa-table"></i> <i class="fas fa-long-arrow-alt-up"></i></button>
+                                                <button id="@btn_top_id" class="merge-btn" grid="@position" merge_type="top" disabled><i class="fas fa-table"></i> <i class="fas fa-long-arrow-alt-up"></i></button>
                                             </td>
                                             <td></td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <button id="@btn_left_id" class="merge-btn"  grid="@position" merge_type="left"><i class="fas fa-table"></i> <i class="fas fa-long-arrow-alt-left"></i></button>
+                                                <button id="@btn_left_id" class="merge-btn"  grid="@position" merge_type="left" disabled><i class="fas fa-table"></i> <i class="fas fa-long-arrow-alt-left"></i></button>
                                             </td>
                                             <td></td>
                                             <td>
