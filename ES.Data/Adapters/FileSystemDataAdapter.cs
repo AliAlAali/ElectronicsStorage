@@ -12,7 +12,27 @@ namespace ES.Data.Adapters
             throw new NotImplementedException();
         }
 
+        public override void AddDrawerArea(DrawerArea area)
+        {
+            throw new NotImplementedException();
+        }
+
         public override void AddStorageBox(StorageBox box)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void AddStorageLayout(StorageLayout layout)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override DrawerArea GetDrawerAreaById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override IEnumerable<DrawerArea> GetDrawerAreas()
         {
             throw new NotImplementedException();
         }
@@ -33,6 +53,16 @@ namespace ES.Data.Adapters
         }
 
         public override IEnumerable<Drawer> GetStorageBoxes()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override StorageLayout GetStorageLayoutById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override IEnumerable<StorageLayout> GetStorageLayouts()
         {
             throw new NotImplementedException();
         }

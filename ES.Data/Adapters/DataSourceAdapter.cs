@@ -19,5 +19,14 @@ namespace ES.Data.Adapters
         public abstract StorageBox GetStorageBoxById(int id);
         public abstract void AddStorageBox(StorageBox box);
 
+        // Editable layout
+        public abstract IEnumerable<StorageLayout> GetStorageLayouts();
+        public abstract StorageLayout GetStorageLayoutById(int id);
+        public abstract void AddStorageLayout(StorageLayout layout);
+
+
+        public abstract IEnumerable<DrawerArea> GetDrawerAreas();
+        public abstract DrawerArea GetDrawerAreaById(int id);
+        public abstract void AddDrawerArea(DrawerArea area);
     }
 }
