@@ -17,104 +17,70 @@
 
 
 
-<table class="storagebox" num_rows="10" num_col="6">
-    @{
-
-        for (int r = 0; r < 10; r++)
-        {
-            <tr>
-                @{
-                    for (int c = 0; c < 6; c++)
-                    {
-                        var prefix = String.Format("btn_{0}_{1}_", c, r);
-                        var btn_top_id = prefix + "top";
-                        var btn_right_id = prefix + "right";
-                        var btn_bottom_id = prefix + "bottom";
-                        var btn_left_id = prefix + "left";
-
-                        var drawerId = "drawer_" + prefix;
-                        var position = String.Format("({0}, {1})", c, r);
-                        <td>
-                            <div class="drawer-editable" id="@drawerId">
-                                <label>Drawer</label>
-                                <table>
-                                    <tr>
-                                        <td></td>
-                                        <td>
-                                            <button id="@btn_top_id" class="merge-btn" grid="@position" merge_type="top" disabled><i class="fas fa-table"></i> <i class="fas fa-long-arrow-alt-up"></i></button>
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button id="@btn_left_id" class="merge-btn" grid="@position" merge_type="left" disabled><i class="fas fa-table"></i> <i class="fas fa-long-arrow-alt-left"></i></button>
-                                        </td>
-                                        <td></td>
-                                        <td>
-                                            <button id="@btn_right_id" class="merge-btn" grid="@position" merge_type="right"><i class="fas fa-table"></i> <i class="fas fa-long-arrow-alt-right"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>
-                                            <button id="@btn_bottom_id" class="merge-btn" grid="@position" merge_type="bottom"><i class="fas fa-table"></i> <i class="fas fa-long-arrow-alt-down"></i></button>
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </td>
-                    }
-                }
-            </tr>
-        }
-    }
-
-
-</table>
 
 <table class="storagebox" num_rows="10" num_col="6">
     @{
+        var adapter = new FileSystemDataAdapter();
+        var cLayout = new StorageLayout(10, 6) { Id = 1 };
+        adapter.AddStorageLayout(cLayout);
+        var dr = new Drawer() { Id = 1, Place = new DrawerArea() { Id = 1 } };
+
         var layout = new FixedDataAdapter().Layout;
         int i = 0;
         List<DrawerArea> row;
-        while ((row = layout.GetRow(i)) != null)
+        while ((row = layout.GetRow(i++)) != null)
         {
-            foreach (DrawerArea drawer in row)
-            {
-                var prefix = String.Format("btn_{0}_{1}_", drawer.Position.X, drawer.Position.Y);
-                var btn_top_id = prefix + "top";
-                var btn_right_id = prefix + "right";
-                var btn_bottom_id = prefix + "bottom";
-                var btn_left_id = prefix + "left";
+            <tr class="storagebox-row">
 
-                var drawerId = "drawer_" + prefix;
-                var position = String.Format("({0}, {1})", drawer.Position.X, drawer.Position.Y);
-            }
-        }
-
-
-        for (int r = 0; r < 10; r++)
-        {
-            <tr>
-                @{
-                    for (int c = 0; c < 6; c++)
+                @{ 
+                    foreach (DrawerArea drawer in row)
                     {
-                        var prefix = String.Format("btn_{0}_{1}_", c, r);
+                        var prefix = String.Format("btn_{0}_{1}_", drawer.Position.X, drawer.Position.Y);
                         var btn_top_id = prefix + "top";
                         var btn_right_id = prefix + "right";
                         var btn_bottom_id = prefix + "bottom";
                         var btn_left_id = prefix + "left";
 
                         var drawerId = "drawer_" + prefix;
-                        var position = String.Format("({0}, {1})", c, r);
+                        var position = String.Format("({0}, {1})", drawer.Position.X, drawer.Position.Y);
 
+
+                    <td  class="storagebox-col" rowspan="@drawer.RowSpan" colspan="@drawer.ColSpan">
+                        <div class="drawer-editable" id="@drawerId">
+                            <label>Drawer</label>
+                            <table>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <button id="@btn_top_id" class="merge-btn" grid="@position" merge_type="top" disabled><i class="fas fa-table"></i> <i class="fas fa-long-arrow-alt-up"></i></button>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button id="@btn_left_id" class="merge-btn" grid="@position" merge_type="left" disabled><i class="fas fa-table"></i> <i class="fas fa-long-arrow-alt-left"></i></button>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <button id="@btn_right_id" class="merge-btn" grid="@position" merge_type="right"><i class="fas fa-table"></i> <i class="fas fa-long-arrow-alt-right"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <button id="@btn_bottom_id" class="merge-btn" grid="@position" merge_type="bottom"><i class="fas fa-table"></i> <i class="fas fa-long-arrow-alt-down"></i></button>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                        }
                     }
-                }
             </tr>
         }
     }
-
+    
 
 </table>
 

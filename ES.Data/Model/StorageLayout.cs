@@ -4,8 +4,11 @@ using System.Text;
 
 namespace ES.Data.Model
 {
+    [Serializable]
     public class StorageLayout
     {
+        public int Id { get; set; } = 0;
+
         public List<DrawerArea> Drawers { get; set; }
         public int Columns { get; set; }
         public int Rows { get; set; }

@@ -26,6 +26,12 @@ namespace ES.Data.Adapters
                     var area = new DrawerArea();
                     area.Position.X = c;
                     area.Position.Y = r;
+                    
+                    if(r == 2 && c == 0)
+                    {
+                        area.ColSpan = 2;
+                        area.RowSpan = 2;
+                    }
 
                     Drawers.Add(new Drawer()
                     {
@@ -78,7 +84,7 @@ namespace ES.Data.Adapters
             throw new NotImplementedException();
         }
 
-        public override IEnumerable<Drawer> GetStorageBoxes()
+        public override IEnumerable<StorageBox> GetStorageBoxes()
         {
             throw new NotImplementedException();
         }

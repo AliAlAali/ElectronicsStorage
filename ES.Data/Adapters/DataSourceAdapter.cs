@@ -15,7 +15,7 @@ namespace ES.Data.Adapters
         public abstract void AddDrawer(Drawer drawer);
 
         // Storage box
-        public abstract IEnumerable<Drawer> GetStorageBoxes();
+        public abstract IEnumerable<StorageBox> GetStorageBoxes();
         public abstract StorageBox GetStorageBoxById(int id);
         public abstract void AddStorageBox(StorageBox box);
 

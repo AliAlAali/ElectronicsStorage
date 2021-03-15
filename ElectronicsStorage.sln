@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectronicsStorage", "ElectronicsStorage\ElectronicsStorage.csproj", "{2D623C04-B6AA-4713-9661-460BABC72993}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ES.Data", "ES.Data\ES.Data.csproj", "{493200E0-C571-4A2C-91F3-4BE0A5903AB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ES.Data", "ES.Data\ES.Data.csproj", "{493200E0-C571-4A2C-91F3-4BE0A5903AB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ES.Data.Test", "ES.Data.Test\ES.Data.Test.csproj", "{ACF9B2EC-73A4-49E5-B19A-467AA87A06DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{493200E0-C571-4A2C-91F3-4BE0A5903AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{493200E0-C571-4A2C-91F3-4BE0A5903AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{493200E0-C571-4A2C-91F3-4BE0A5903AB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF9B2EC-73A4-49E5-B19A-467AA87A06DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF9B2EC-73A4-49E5-B19A-467AA87A06DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF9B2EC-73A4-49E5-B19A-467AA87A06DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF9B2EC-73A4-49E5-B19A-467AA87A06DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

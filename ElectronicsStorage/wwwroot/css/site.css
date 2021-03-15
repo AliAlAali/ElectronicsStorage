@@ -53,8 +53,17 @@ body {
     background: #ff6a00;
     border-radius: 5px;
     width: 100%;
+    height: 100%;
     padding: 10px;
     border-spacing: 3px;
+}
+
+.storagebox-row{
+    height: 100%;
+}
+
+.storagebox-col{
+    height: 100%;
 }
 
 .drawer-editable {
@@ -62,5 +71,6 @@ body {
     border-radius: 3px;
     margin: 5px;
     min-height: 50px;
+    height: 100%;
 }
 

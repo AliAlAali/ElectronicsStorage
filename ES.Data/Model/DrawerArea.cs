@@ -4,8 +4,10 @@ using System.Text;
 
 namespace ES.Data.Model
 {
+    [Serializable]
     public class DrawerArea
     {
+        public int Id { get; set; } = 0;
         public Position Position { get; set; }
         public int RowSpan { get; set; }
         public int ColSpan { get; set; }

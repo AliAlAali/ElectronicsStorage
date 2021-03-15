@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ES.Data.Model
 {
+    [Serializable]
     public class Position
     {
         public int X { get; set; }
